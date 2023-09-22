@@ -71,11 +71,18 @@ public class GameController : MonoBehaviour
             else if (slot.state == Slot.SLOTSTATE.EMPTY && carryingItem != null)
             {//빈 슬롯에 아이템을 배치
                 slot.CreateItem(carryingItem.itemId);   //잡고 있는것 슬롯 위치에 생성
-                Destroy(carryingItem);      //잡고 있던것 파괴
+                Destroy(carryingItem.gameObject);      //잡고 있던것 파괴
             }
             else if (slot.state == Slot.SLOTSTATE.FULL && carryingItem != null)
             {//Checking 후 병합
-
+                if (slot.itemObject.id == carryingItem.itemId)
+                {
+                    OnItemMergedWithTarget(slot.id);    //병합 함수 호출
+                }
+                else
+                {
+                    OnItemCarryFail();  //아이템 배치 실패
+                }
             }
         }
         else
@@ -133,4 +140,12 @@ public class GameController : MonoBehaviour
     {//슬롯 ID로 딕셔너리에서 Slot 클래스를 리턴 
         return slotDictionary[id];
     }
+    void OnItemMergedWithTarget(int targetSlotId)
+    {//병합 함수
+        var slot = GetSlotById(targetSlotId);
+        Destroy(slot.itemObject.gameObject);            //slot에 있는 물체 파괴
+        slot.CreateItem(carryingItem.itemId + 1);       //슬롯에 다음 번호 물체 생성
+        Destroy(carryingItem.gameObject);               //잡고 있는 물체 파괴
+    }
+
 }
