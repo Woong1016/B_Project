@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 8
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9334cc8cb513f8e4b998bbbae0a2dd31, type: 3}
+  m_Name: GameDB
+  m_EditorClassIdentifier: 
+  sheets:
+  - name: Sheet1
+    list:
+    - index: 1
+      characterName: "\uCE90\uB9AD\uD130\uC774\uB9841"
+      HP: 50
+      MP: 50
+    - index: 2
+      characterName: "\uCE90\uB9AD\uD130\uC774\uB9842"
+      HP: 51
+      MP: 51
+    - index: 3
+      characterName: "\uCE90\uB9AD\uD130\uC774\uB9843"
+      HP: 52
+      MP: 52
+    - index: 4
+      characterName: "\uCE90\uB9AD\uD130\uC774\uB9844"
+      HP: 53
+      MP: 53
+    - index: 5
+      characterName: "\uCE90\uB9AD\uD130\uC774\uB9845"
+      HP: 54
+      MP: 54
+    - index: 6
+      characterName: "\uCE90\uB9AD\uD130\uC774\uB9846"
+      HP: 55
+      MP: 55
+    - index: 7
+      characterName: "\uCE90\uB9AD\uD130\uC774\uB9847"
+      HP: 56
+      MP: 56
+    - index: 8
+      characterName: "\uCE90\uB9AD\uD130\uC774\uB9848"
+      HP: 57
+      MP: 57
+    - index: 9
+      characterName: "\uCE90\uB9AD\uD130\uC774\uB9849"
+      HP: 58
+      MP: 58
+    - index: 10
+      characterName: "\uCE90\uB9AD\uD130\uC774\uB98410"
+      HP: 59
+      MP: 59
